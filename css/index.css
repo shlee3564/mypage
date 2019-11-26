@@ -1,0 +1,1338 @@
+@charset "utf-8";
+@import url(reset.css);
+@font-face {
+    font-family: 'NanumSquare';
+    src: local('font/NanumSquare'),
+        url('../font/NanumSquareR.ttf'),
+        url('../font/NanumSquareR.eot'),
+        url('../font/NanumSquareR.woff');
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('../font/NanumSquareL.ttf'),
+        url('../font/NanumSquareL.eot'),
+        url('../font/NanumSquareL.woff');
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('../font/NanumSquareB.ttf'),
+        url('../font/NanumSquareB.eot'),
+        url('../font/NanumSquareB.woff');
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('../font/NanumSquareEB.ttf'),
+        url('../font/NanumSquareEB.eot'),
+        url('../font/NanumSquareEB.woff');
+}
+html,body {
+    font-family: 'NanumSquare';
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background: rgba(255,255,255,0.2);
+    color: #494949;
+    z-index: 999;
+}
+header > h1 {
+    width: 130px;
+    margin-left: 10PX;
+    margin-top: 5px;
+    float: left;
+}
+header > h1 > a {
+    display: block;
+}
+header > ul {
+    width: 30%;
+    margin-top: 28px;
+    float: right;
+}
+header > ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+header > ul > li {
+    float: left;
+    width: 25%;
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+}
+header > ul > li:hover {
+    color: #e27171;
+    transition: all 0.5s;
+}
+header > ul > li:after {
+    content: '';
+    display: block;
+    width: 0;
+    border-bottom: 3px solid #e27171;
+    transition: all 0.5s;
+}
+header > ul > li:hover:after {
+    width: 80%;
+}
+
+.on {
+    color: #e27171;
+}
+.on:after {
+    width: 80%;
+}
+
+
+
+figure {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../images/figure_bg.jpeg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 280px 0;
+    overflow: hidden;
+}
+
+figure > .title_box {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 20px solid #f9f9f9;
+    text-align: center;
+    color: #494949;
+    padding: 140px 0;
+    box-shadow: 1px 5px 20px -4px gray;
+}
+
+
+figure > .title_box > h2 {
+    font-size: 50px;
+    position: relative;
+    width: 290px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 5px solid #f9f9f9;
+    padding-top: 10px;
+}
+figure > .title_box > span {
+    font-size: 20px;
+    display: inline-block;
+    width: 290px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 5px solid #f9f9f9;
+    padding-bottom: 10px;
+}
+figure > .title_box > p {
+    margin-top: 50px;
+    font-size: 25px;
+    color: #777;
+}
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+}
+.about:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.about > .myImg {
+    width: 35%;
+    float: left;
+    text-align: center;
+    margin: 19% 0;
+    position: relative;
+}
+.about > .myImg:after {
+    position: absolute;
+    top: -70px;
+    left: 130px;
+    content: '';
+    width: 280px;
+    height: 330px;
+    background: #efeeee;
+}
+.about > .myImg > img {
+    width: 260px;
+    position: relative;
+    z-index: 10;
+    border: 1px solid #efeeee;
+}
+.about > .myInfo {
+    width: 32.5%;
+    float: left;
+    padding: 14% 0;
+    position: relative;
+}
+.about h3:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e27171;
+    margin-bottom: 10px;
+}
+.about h3 {
+    font-size: 30px;
+}
+
+.about > .myInfo > strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.about > .myInfo > .job {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+.about > .myInfo > .job > li {
+    width: 200px;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+.about > .myInfo > .profile {
+    position: relative;
+    margin-bottom: 80px;
+}
+.about > .myInfo > .profile > li {
+    line-height: 30px;
+    font-size: 18px;
+}
+.about > .myInfo > .edu {
+    margin-top: 30px;
+    margin-right: 60px;
+    float: left;
+}
+.about > .myInfo > .edu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.about > .myInfo > .edu > li {
+    font-size: 18px;
+    line-height: 28px;
+}
+.about > .myInfo > .edu > li:nth-child(1) {
+    list-style-type: square;
+}
+
+
+.about > .myIntro {
+    width: 32.5%;
+    float: left;
+    padding: 14% 0;
+    position: relative;
+}
+.about > .myIntro > p {
+    font-size: 17px;
+    width: 70%;
+    margin-top: 50px;
+    line-height: 30px;
+}
+.about > .myIntro > .hide {
+    margin-top: 30px;
+}
+
+
+.skill {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../images/skill_bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.skill > #skill_box {
+    width: 100%;
+    padding: 100px 150px 0 150px;
+}
+#skill_box > h4:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e27171;
+    margin-bottom: 10px;
+}
+#skill_box > h4 {
+    font-size: 30px;
+}
+
+
+
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+.portfolio > img:nth-child(2) {
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    left: 50px;
+    cursor: pointer;
+}
+.portfolio > img:nth-child(3) {
+    position: absolute;
+    width: 25px;
+    top: 49.3%;
+    right: 50px;
+    cursor: pointer;
+}
+.portfolio > #port_box {
+    width: 100%;
+    padding: 100px 150px;
+}
+#port_box > h5:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e27171;
+    margin-bottom: 10px;
+}
+#port_box > h5 {
+    font-size: 30px;
+}
+
+
+#port_box > .pf1 {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf1 > .pf1-1:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#port_box > .pf1 > .pf1-1 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+#port_box > .pf1 > .pf1-1 > .comImg {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+#port_box > .pf1 > .pf1-1 > .comImg:after {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    content: '';
+    width: 700px;
+    height: 250px;
+    background: #efeeee;
+}
+#port_box > .pf1 > .pf1-1 > .comImg > img {
+    width: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+#port_box > .pf1 > .pf1-1 > .comTxt {
+    float: right;
+    width: 45%;
+    margin-top: 50px;
+}
+#port_box > .pf1 > .pf1-1 > .comTxt > p {
+    font-family: "NanumSquareEB";
+    font-size: 40px;
+    color: #e27171;
+}
+#port_box > .pf1 > .pf1-1 > .comTxt > span {
+    font-weight: bold;
+    font-size: 23px;
+    margin: 50px 0 30px 0;
+    display: block;
+    position: relative;
+    z-index: 30;
+}
+#port_box > .pf1 > .pf1-1 > .comTxt > ul {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf1 > .pf1-1 > .comTxt > ul > li {
+    list-style: square;
+    line-height: 30px;
+    font-size: 17px;
+}
+#port_box > .pf1 > .pf1-1 > .comTxt > a {
+    display: block;
+    border: 3px solid #e27171;
+    width: 250px;
+    height: 50px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 18px;
+    color: #e27171;
+    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 30;
+}
+
+
+
+#port_box > .pf1 > .pf1-2 {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf1 > .pf1-2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#port_box > .pf1 > .pf1-2 > .comImg {
+    width: 50%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+#port_box > .pf1 > .pf1-2 > .comImg:after {
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    content: '';
+    width: 700px;
+    height: 250px;
+    background: #efeeee;
+}
+#port_box > .pf1 > .pf1-2 > .comImg > img {
+    width: 400px;
+    position: relative;
+    z-index: 10;
+    float: left;
+    margin-left: 100px;
+}
+
+#port_box > .pf1 > .pf1-2 > .comTxt {
+    float: right;
+    width: 35%;
+    margin-top: 50px;
+}
+#port_box > .pf1 > .pf1-2 > .comTxt > p {
+    font-family: "NanumSquareEB";
+    font-size: 40px;
+    color: #e27171;
+}
+#port_box > .pf1 > .pf1-2 > .comTxt > span {
+    font-weight: bold;
+    font-size: 23px;
+    margin: 50px 0 30px 0;
+    display: block;
+    position: relative;
+    z-index: 30;
+}
+#port_box > .pf1 > .pf1-2 > .comTxt > ul {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf1 > .pf1-2 > .comTxt > ul > li {
+    list-style: square;
+    line-height: 30px;
+    font-size: 17px;
+}
+#port_box > .pf1 > .pf1-2 > .comTxt > a {
+    display: block;
+    border: 3px solid #e27171;
+    width: 250px;
+    height: 50px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 18px;
+    color: #e27171;
+    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 30;
+}
+
+
+
+#port_box > .pf2 {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf2 > .pf2-1:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#port_box > .pf2 > .pf2-1 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+#port_box > .pf2 > .pf2-1 > .comImg {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+#port_box > .pf2 > .pf2-1 > .comImg:after {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    content: '';
+    width: 700px;
+    height: 250px;
+    background: #efeeee;
+}
+#port_box > .pf2 > .pf2-1 > .comImg > img {
+    width: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+#port_box > .pf2 > .pf2-1 > .comTxt {
+    float: right;
+    width: 45%;
+    margin-top: 50px;
+}
+#port_box > .pf2 > .pf2-1 > .comTxt > p {
+    font-family: "NanumSquareEB";
+    font-size: 40px;
+    color: #e27171;
+}
+#port_box > .pf2 > .pf2-1 > .comTxt > span {
+    font-weight: bold;
+    font-size: 23px;
+    margin: 50px 0 30px 0;
+    display: block;
+    position: relative;
+    z-index: 30;
+}
+#port_box > .pf2 > .pf2-1 > .comTxt > ul {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf2 > .pf2-1 > .comTxt > ul > li {
+    list-style: square;
+    line-height: 30px;
+    font-size: 17px;
+}
+#port_box > .pf2 > .pf2-1 > .comTxt > a {
+    display: block;
+    border: 3px solid #e27171;
+    width: 250px;
+    height: 50px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 18px;
+    color: #e27171;
+    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 30;
+}
+
+
+
+#port_box > .pf2 > .pf2-2 {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf2 > .pf2-2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#port_box > .pf2 > .pf2-2 > .comImg {
+    width: 50%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+#port_box > .pf2 > .pf2-2 > .comImg:after {
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    content: '';
+    width: 700px;
+    height: 250px;
+    background: #efeeee;
+}
+#port_box > .pf2 > .pf2-2 > .comImg > img {
+    width: 400px;
+    position: relative;
+    z-index: 10;
+    float: left;
+    margin-left: 100px;
+}
+
+#port_box > .pf2 > .pf2-2 > .comTxt {
+    float: right;
+    width: 35%;
+    margin-top: 50px;
+}
+#port_box > .pf2 > .pf2-2 > .comTxt > p {
+    font-family: "NanumSquareEB";
+    font-size: 40px;
+    color: #e27171;
+}
+#port_box > .pf2 > .pf2-2 > .comTxt > span {
+    font-weight: bold;
+    font-size: 23px;
+    margin: 50px 0 30px 0;
+    display: block;
+    position: relative;
+    z-index: 30;
+}
+#port_box > .pf2 > .pf2-2 > .comTxt > ul {
+    width: 100%;
+    position: relative;
+}
+#port_box > .pf2 > .pf2-2 > .comTxt > ul > li {
+    list-style: square;
+    line-height: 30px;
+    font-size: 17px;
+}
+#port_box > .pf2 > .pf2-2 > .comTxt > a {
+    display: block;
+    border: 3px solid #e27171;
+    width: 250px;
+    height: 50px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 18px;
+    color: #e27171;
+    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 30;
+}
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    header > ul {
+        width: 40%;
+    }
+    
+    
+    .about > .myImg {
+        width: 35%;
+        float: left;
+        text-align: center;
+        margin: 28% 0;
+        position: relative;
+    }
+    .about > .myImg:after {
+        position: absolute;
+        top: -50px;
+        left: 20px;
+        content: '';
+        width: 280px;
+        height: 330px;
+        background: #efeeee;
+    }
+    .about > .myIntro > p {
+        font-size: 17px;
+        width: 90%;
+        margin-top: 50px;
+        line-height: 30px;
+    }
+
+
+
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header > ul {
+        width: 50%;
+    }
+    
+    figure {
+        padding: 300px 0;
+    }
+    figure > .title_box {
+        width: 450px;
+        height: 450px;
+        padding: 120px 0;
+    }
+    figure > .title_box > h2 {
+        font-size: 45px;
+    }
+    
+    .about {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+        padding: 50px 0;
+    }
+    .about > .myImg {
+        width: 35%;
+        float: left;
+        text-align: center;
+        margin: 38% 0;
+        position: relative;
+    }
+    .about > .myImg:after {
+        display: none;
+    }
+    .about > .myImg > img {
+        width: 200px;
+        position: relative;
+        z-index: 10;
+        border: 1px solid #efeeee;
+    }
+    
+    
+    .skill > #skill_box {
+        width: 100%;
+        padding: 100px 50px;
+    }
+    
+    
+    .portfolio > img:nth-child(2) {
+        width: 25px;
+        left: 20px;
+    }
+    .portfolio > img:nth-child(3) {
+        width: 25px;
+        right: 20px;
+    }
+    .portfolio > #port_box {
+        width: 100%;
+        padding: 100px 50px;
+    }
+    
+    
+    #port_box > .pf1 > .pf1-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf1 > .pf1-2 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg:after {
+        display: none;
+    }
+    
+    #port_box > .pf1 > .pf1-1 > .comTxt > a {
+        margin: 30px 0 0 0;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > a {
+        margin: 30px 0 0 0;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > a {
+        margin: 30px 0 0 0;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > a {
+        margin: 30px 0 0 0;
+    }
+    
+    #port_box > .pf1 > .pf1-2 > .comImg > img {
+        margin-left: 0px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg > img {
+        margin-left: 0px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    header > h1 {
+        width: 130px;
+        margin: 5px auto;
+        float: none;
+    }
+    header > ul {
+        display: none;
+    }
+    
+    figure {
+        padding: 300px 0;
+    }
+    figure > .title_box {
+        width: 400px;
+        height: 400px;
+        padding: 105px 0;
+    }
+    figure > .title_box > h2 {
+        width: 250px;
+        font-size: 40px;
+    }
+    figure > .title_box > span {
+        width: 250px;
+    }
+    
+    .about {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    .about > .myImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin: 0;
+        position: relative;
+    }
+    .about > .myImg:after {
+        display: none;
+    }
+    .about > .myImg > img {
+        width: 180px;
+        margin: 180px 0 50px 0;
+        position: relative;
+        z-index: 10;
+        border: 1px solid #efeeee;
+    }
+    .about > .myInfo {
+        width: 50%;
+        float: right;
+        padding: 130px 0 0 0;
+        position: relative;
+    }
+    .about h3:before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #e27171;
+        margin-bottom: 10px;
+    }
+    .about h3 {
+        font-size: 27px;
+    }
+
+    .about > .myInfo > strong {
+        display: block;
+        font-size: 28px;
+        margin-top: 50px;
+    }
+    .about > .myInfo > .job {
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+    .about > .myInfo > .job > li {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .about > .myInfo > .profile {
+        width: 60%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .about > .myInfo > .profile > li {
+        line-height: 30px;
+        font-size: 17px;
+    }
+    
+    .about > .myInfo > .edu_h3 {
+        display: none;
+    }
+    .about > .myInfo > .edu {
+        display: none;
+    }
+
+
+    .about > .myIntro {
+        width: 100%;
+        float: left;
+        padding: 0 10%;
+        position: relative;
+    }
+    .about > .myIntro > p {
+        font-size: 16px;
+        width: 100%;
+        margin-top: 50px;
+        line-height: 30px;
+    }
+    
+    
+    .skill > #skill_box {
+        width: 100%;
+        padding: 100px 50px;
+    }
+    #skill_box > h4:before {
+        width: 50px;
+    }
+    #skill_box > h4 {
+        font-size: 27px;
+    }
+
+    
+    
+    .portfolio > img:nth-child(2) {
+        width: 20px;
+        left: 20px;
+    }
+    .portfolio > img:nth-child(3) {
+        width: 20px;
+        right: 20px;
+    }
+    .portfolio > #port_box {
+        width: 100%;
+        padding: 100px 50px;
+    }
+    #port_box > h5:before {
+        width: 50px;
+    }
+    #port_box > h5 {
+        font-size: 27px;
+    }
+    
+    
+    #port_box > .pf1 > .pf1-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf1 > .pf1-2 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg:after {
+        display: none;
+    }    
+    
+    
+    #port_box > .pf1 > .pf1-1 {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+    }
+    #port_box > .pf1 > .pf1-1 > .comImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    #port_box > .pf1 > .pf1-1 > .comImg > img {
+        margin-top: 50px;
+    }
+
+    #port_box > .pf1 > .pf1-1 > .comTxt > p {
+        font-size: 38px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > ul > li {
+        font-size: 16px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > a {
+        width: 90%;
+        height: 45px;
+        line-height: 42px;
+        font-size: 17px;
+        margin: 30px 0 0 0;
+    }
+    
+
+    #port_box > .pf1 > .pf1-2 > .comTxt {
+        float: right;
+        width: 45%;
+        margin-top: 50px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comImg > img {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > p {
+        font-size: 38px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > ul > li {
+        font-size: 16px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > a {
+        width: 90%;
+        height: 45px;
+        line-height: 42px;
+        font-size: 17px;
+        margin: 30px 0 0 0;
+    }
+    
+    #port_box > .pf2 > .pf2-1 {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg > img {
+        margin-top: 50px;
+    }
+
+    #port_box > .pf2 > .pf2-1 > .comTxt > p {
+        font-size: 38px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > ul > li {
+        font-size: 16px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > a {
+        width: 90%;
+        height: 45px;
+        line-height: 42px;
+        font-size: 17px;
+        margin: 30px 0 0 0;
+    }
+    
+
+    #port_box > .pf2 > .pf2-2 > .comTxt {
+        float: right;
+        width: 45%;
+        margin-top: 50px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg > img {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > p {
+        font-size: 38px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > ul > li {
+        font-size: 16px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > a {
+        width: 90%;
+        height: 45px;
+        line-height: 42px;
+        font-size: 17px;
+        margin: 30px 0 0 0;
+    }
+    
+
+
+}
+
+
+@media all and (max-width: 480px) {
+    header {
+        height: 60px;
+    }
+    header > h1 {
+        width: 105px;
+        margin: 3px auto;
+        float: none;
+    }
+    header > ul {
+        display: none;
+    }
+    
+    
+    figure {
+        padding: 190px 0;
+    }
+    figure > .title_box {
+        width: 300px;
+        height: 300px;
+        padding: 70px 0;
+    }
+    figure > .title_box > h2 {
+        width: 210px;
+        font-size: 35px;
+    }
+    figure > .title_box > span {
+        width: 210px;
+    }
+    figure > .title_box > p {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+        
+    
+    .about {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    .about > .myImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin: 0;
+        position: relative;
+    }
+    .about > .myImg:after {
+        display: none;
+    }
+    .about > .myImg > img {
+        width: 130px;
+        margin: 130px 0 50px 0;
+        position: relative;
+        z-index: 10;
+        border: 1px solid #efeeee;
+    }
+    .about > .myInfo {
+        width: 50%;
+        float: right;
+        padding: 80px 0 0 0;
+        position: relative;
+    }
+    .about h3:before {
+        width: 40px;
+        height: 3px;
+        margin-bottom: 10px;
+    }
+    .about h3 {
+        font-size: 21px;
+    }
+
+    .about > .myInfo > strong {
+        display: block;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .about > .myInfo > .job {
+        width: 60%;
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .about > .myInfo > .job > li {
+        width: 60%;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .about > .myInfo > .profile {
+        width: 60%;
+        position: relative;
+        margin-bottom: 0px;
+    }
+    .about > .myInfo > .profile > li {
+        line-height: 25px;
+        font-size: 15px;
+    }
+    
+    .about > .myInfo > .edu_h3 {
+        display: none;
+    }
+    .about > .myInfo > .edu {
+        display: none;
+    }
+
+
+    .about > .myIntro {
+        width: 100%;
+        float: left;
+        padding: 0 10%;
+        position: relative;
+    }
+    .about > .myIntro > p {
+        font-size: 15px;
+        width: 100%;
+        margin-top: 30px;
+        line-height: 25px;
+    }
+    .about > .myIntro > .hide {
+        display: none;
+    }
+    
+    
+    
+    .skill > #skill_box {
+        width: 100%;
+        padding: 80px 20px;
+    }
+    #skill_box > h4:before {
+        width: 40px;
+    }
+    #skill_box > h4 {
+        font-size: 24px;
+    }
+
+    
+    
+    .portfolio > img:nth-child(2) {
+        width: 15px;
+        left: 10px;
+    }
+    .portfolio > img:nth-child(3) {
+        width: 15px;
+        right: 10px;
+    }
+    .portfolio > #port_box {
+        width: 100%;
+        padding: 80px 20px;
+    }
+    #port_box > h5:before {
+        width: 40px;
+    }
+    #port_box > h5 {
+        font-size: 24px;
+    }
+    
+    
+    #port_box > .pf1 > .pf1-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf1 > .pf1-2 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg:after {
+        display: none;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg:after {
+        display: none;
+    }    
+    
+    
+    #port_box > .pf1 > .pf1-1 {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+    }
+    #port_box > .pf1 > .pf1-1 > .comImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    #port_box > .pf1 > .pf1-1 > .comImg > img {
+        margin-top: 50px;
+    }
+    
+    #port_box > .pf1 > .pf1-1 > .comTxt {
+        margin-top: 0px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > span {
+        margin: 10px 0 10px 0;
+        font-size: 19px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > p {
+        font-size: 30px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > ul > li {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    #port_box > .pf1 > .pf1-1 > .comTxt > a {
+        width: 90%;
+        height: 40px;
+        line-height: 37px;
+        font-size: 16px;
+        margin: 10px 0 0 0;
+    }
+    
+
+    #port_box > .pf1 > .pf1-2 > .comTxt {
+        float: right;
+        width: 45%;
+        margin-top: 50px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comImg > img {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt {
+        margin-top: 0px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > span {
+        margin: 10px 0 10px 0;
+        font-size: 19px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > p {
+        font-size: 30px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > ul > li {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    #port_box > .pf1 > .pf1-2 > .comTxt > a {
+        width: 90%;
+        height: 40px;
+        line-height: 37px;
+        font-size: 16px;
+        margin: 10px 0 0 0;
+    }
+    
+    #port_box > .pf2 > .pf2-1 {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    #port_box > .pf2 > .pf2-1 > .comImg > img {
+        margin-top: 50px;
+    }
+    
+    #port_box > .pf2 > .pf2-1 > .comTxt {
+        margin-top: 0px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > span {
+        margin: 10px 0 10px 0;
+        font-size: 19px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > p {
+        font-size: 30px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > ul > li {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    #port_box > .pf2 > .pf2-1 > .comTxt > a {
+        width: 90%;
+        height: 40px;
+        line-height: 37px;
+        font-size: 16px;
+        margin: 10px 0 0 0;
+    }
+    
+
+    #port_box > .pf2 > .pf2-2 > .comTxt {
+        float: right;
+        width: 45%;
+        margin-top: 50px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comImg > img {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    
+    #port_box > .pf2 > .pf2-2 > .comTxt {
+        margin-top: 0px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > span {
+        margin: 10px 0 10px 0;
+        font-size: 19px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > p {
+        font-size: 30px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > ul > li {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    #port_box > .pf2 > .pf2-2 > .comTxt > a {
+        width: 90%;
+        height: 40px;
+        line-height: 37px;
+        font-size: 16px;
+        margin: 10px 0 0 0;
+    }
+
+}
+
+

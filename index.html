@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이승현 포트폴리오</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW(). init();
+    </script>
+    
+       
+       
+       <script>
+        $(function($){
+            
+            $(".skill>#skill_box>#progress").load("progresscircle.html");
+            
+            
+           $(".box").each(function(){
+              $(this).on("mousewheel",function(e){
+                  e.preventDefault();
+                  
+                  var delta=0;
+                  
+                  delta=e.originalEvent.wheelDelta/120;
+                  var moveTop=null;
+                  if(delta < 0){
+                      if($(this).next() != undefined){
+                          new WOW(). init();
+                          try{
+                              moveTop=$(this).next().offset().top;
+                          }catch(e){}
+                      }
+                  }else {
+                      if($(this).prev() != undefined) {
+                          new WOW(). init();
+                           try{
+                              moveTop=$(this).prev().offset().top;
+                          }catch(e){}
+                      }
+                  }
+                  $("html,body").stop().animate({"scrollTop":moveTop+"px"},800);
+                  
+              }); 
+           }); 
+            
+             $("header > h1").click(function(){
+                    $("html,body").stop().animate({"scrollTop":"0"},800);
+                    $("header>ul>li").removeClass("on");
+                });
+            
+            $(window).scroll(function(){
+               var scroll = $(window).scrollTop();
+                if(scroll>10) {
+                    $("header").css({"background":"rgba(0,0,0,0.2)","color":"#f9f9f9"});
+                } else {
+                    $("header").css({"background":"rgba(255,255,255,0.2)","color":"#494949"});
+                }
+           
+            
+                var ht= $(window).height();
+
+                var scroll = $(window).scrollTop();
+                
+                for(var i=0; i<5; i++){
+                    if(scroll >=ht*(i) && scroll < ht*(i+1)){
+                        $("header>ul>li").removeClass();
+                        $("header>ul>li").eq(i).addClass("on");
+                    };
+                }    
+                
+                
+                var s_top = $(".skill").offset().top;
+        
+                if (scroll == s_top){
+                    $(".skill>#skill_box>#progress").load("progresscircle.html");         
+                }
+               
+                
+            });
+            
+            
+            
+            $("header>ul>li").click(function(event){
+                event.preventDefault();
+                $("header>ul>li").removeClass("on");
+                var i = $(this).index();
+                $("header>ul>li").eq(i).addClass("on");
+                $("html,body").animate({scrollTop:$($(this).attr("data-target")).offset().top},800);
+                
+            });
+            
+            
+            $("#port_box > .pf2").hide();
+            $(".portfolio > img:nth-child(3)").click(function(){
+                $("#port_box > .pf1").hide();
+                $("#port_box > .pf2").fadeIn(1000);
+            });
+            $(".portfolio > img:nth-child(2)").click(function(){
+                $("#port_box > .pf2").hide();
+                $("#port_box > .pf1").fadeIn(1000);
+            });
+                        
+            
+        });
+    </script>
+        
+    
+    
+</head>
+<body>
+  
+   
+    <header>
+     
+      <h1>
+         <a href="#"><img src="images/myLogo.png" alt="이승현로고"></a> 
+      </h1>
+      <ul>
+         <li class="on" data-target=".home"><a href="#">Home</a></li>
+          <li data-target=".about"><a href="#">About</a></li>
+          <li data-target=".skill"><a href="#">Skill</a></li>
+          <li data-target=".portfolio"><a href="#">Portfolio</a></li>
+      </ul>
+    </header>
+    
+    <figure class="home box">
+        <div class="title_box">
+                <h2 class="wow fadeInLeft">PORTFOLIO</h2>
+                <span class="wow fadeInRight">Web Pulisher</span>
+            <p>Lee Seung Hyeon</p>
+        </div>
+    </figure>
+    
+    <article class="about box">
+        <div class="myImg wow fadeInUp" data-wow-duration="1s">
+            <img src="images/myImg.jpg" alt="이승현사진">
+        </div>
+        <div class="myInfo wow fadeInUp" data-wow-duration="1.5s">
+           <h3>Profile</h3>
+            <strong>이승현</strong>
+            <ul class="job">
+                <li>Web Publisher</li>
+                <li>Web Designer</li>
+            </ul>
+            <ul class="profile">
+                <li>1997.12.12</li>
+                <li>경기도 군포시</li>
+                <li>010-3130-3564</li>
+                <li>sehyy3564@naver.com</li>
+            </ul>
+            
+            
+            <h3 class="edu_h3">Education</h3>
+            <ul class="edu">
+                <li>남서울대학교</li>
+                <li>멀티미디어학과 전공</li>
+                <li>2016.03 - 2020.02</li>
+            </ul>
+            <ul class="edu">
+                <li>방송정보국제교육원</li>
+                <li>Html5기반 스마트 콘텐츠 제작자 과정</li>
+                <li>2019.06 - 2019.11</li>
+            </ul>
+        </div>
+        <div class="myIntro wow fadeInUp" data-wow-duration="2s">
+            <h3>Intro</h3>
+            <p>
+                안녕하세요. 웹퍼블리셔 이승현입니다.<br>
+                사용자들이 접근하기 쉽고 효율적으로 이용할 수 있는
+                웹페이지를 구축하고자 항상 노력하고 있습니다.
+                빠르게 변화해가고 새로워지는 트렌드에 맞춰 연구하고, 배우며,
+                이를 적용하기위해 늘 관심갖고 있습니다.
+            </p>
+            <p class="hide">
+                누군가는 놓치고 갈 수 있는 부분들을 빼먹지 않고 꼼꼼히 체크하며 
+                회사의 일원으로써 필수적인 존재가 되는 것이 저의 목표입니다.
+                내가 만족하고 클라이언트가 감동 할 수 있을 때까지 스스로
+                나서서 탐구하고 실천하는 웹퍼블리셔가 되겠습니다.
+            </p>
+        </div>
+    </article>
+    
+    
+    <article class="skill box">
+        <div id="skill_box">
+            <h4>Skill</h4>
+            <div id="progress">
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    <article class="portfolio box">
+        <div id="port_box">
+           <h5>Portfolio</h5>
+            <div class="pf1">
+                <div class="pf1-1">
+                    <div class="comImg">
+                        <img src="images/SHgroup.png" alt="SH그룹">
+                    </div>
+                    <div class="comTxt">
+                        <p>01.</p>
+                        <span>SH그룹</span>
+                        <ul>
+                            <li>반응형 웹 (개인)</li>
+                             <li>Html5, Css3, Javascript, jQuery</li>
+                             <li>전력산업을 주요 산업으로 하는 기업 사이트</li>
+                        </ul>
+                        <a href="https://shlee3564.github.io/SeungHyeon/SHgroup" target="_blank">View</a>
+                    </div>
+                </div>
+                <div class="pf1-2">
+                    <div class="comImg">
+                        <img src="images/universal.png" alt="유니버셜스튜디오싱가포르">
+                    </div>
+                    <div class="comTxt">
+                        <p>02.</p>
+                        <span>유니버셜 스튜디오 싱가포르</span>
+                        <ul>
+                            <li>반응형 웹 (개인)</li>
+                             <li>Html5, Css3, Javascript, jQuery</li>
+                             <li>유니버셜 스튜디오 싱가포르의 한국어 버전 사이트</li>
+                        </ul>
+                        <a href="https://shlee3564.github.io/SeungHyeon/universal" target="_blank">View</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="pf2">
+                <div class="pf2-1">
+                    <div class="comImg">
+                        <img src="images/ritz.png" alt="더리츠호텔">
+                    </div>
+                    <div class="comTxt">
+                        <p>03.</p>
+                        <span>더 리츠 호텔</span>
+                        <ul>
+                            <li>반응형 웹 (팀)</li>
+                             <li>Html5, Css3, Javascript, jQuery</li>
+                             <li>가상의 호텔을 만들어 그 호텔을 소개하는 사이트</li>
+                        </ul>
+                        <a href="https://shlee3564.github.io/SeungHyeon/ritz" target="_blank">View</a>
+                    </div>
+                </div>
+                <div class="pf2-2">
+                    <div class="comImg">
+                        <img src="images/miseen.png" alt="미쟝센">
+                    </div>
+                    <div class="comTxt">
+                        <p>04.</p>
+                        <span>미쟝센</span>
+                        <ul>
+                            <li>pc,모바일 페이지(개인)</li>
+                             <li>Html5, Css3, Javascript, jQuery</li>
+                             <li>헤어 화장품 미쟝센 리뉴얼 사이트</li>
+                        </ul>
+                        <a href="https://shlee3564.github.io/SeungHyeon/miseen" target="_blank">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="images/left.png" alt="이전페이지">
+        <img src="images/right.png" alt="다음페이지">
+    </article>
+    
+                               
+         
+    
+
+</body>
+</html>
