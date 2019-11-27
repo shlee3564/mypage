@@ -1016,6 +1016,12 @@ figure > .title_box > p {
         margin: 30px 0 0 0;
     }
     
+    
+    .circlechart{padding: 0 !important; width: 50% !important; margin-bottom: 50px !important;}
+    canvas {top: 19vh !important; width: 180px !important; height: 180px !important;}
+    .chart .percent {top: 18vh !important; font-size:36px !important;}
+    .chart p {top: 22vh !important; font-size:18px !important; }
+    
 
 
 }
@@ -1332,6 +1338,13 @@ figure > .title_box > p {
         font-size: 16px;
         margin: 10px 0 0 0;
     }
+    
+    
+    .circlechart{padding: 0 !important; width: 50% !important; margin-bottom: 3vh !important;}
+    canvas {top: 15vh !important; width: 140px !important; height: 140px !important;}
+    .chart .percent {top: 14vh !important; font-size:30px !important;}
+    .chart p {top: 19vh !important; font-size:15px !important; }
+
 
 }
 
